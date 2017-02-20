@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rBP-i5-6pb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Table View Controller-->
+        <scene sceneID="CXa-04-gw1">
+            <objects>
+                <tableViewController id="bCg-bh-rWE" customClass="HomeTableViewController" customModule="PDF_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nBq-0C-1qQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="tvR-eI-HXI" customClass="TableViewCell" customModule="PDF_Demo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tvR-eI-HXI" id="qTQ-Ik-psx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goJ-bk-vmL">
+                                            <rect key="frame" x="310" y="14" width="34" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="View"/>
+                                            <connections>
+                                                <action selector="viewTapped:" destination="tvR-eI-HXI" eventType="touchUpInside" id="BY5-l8-nlM"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKu-51-yQj">
+                                            <rect key="frame" x="23" y="19" width="126" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09O-En-BqX">
+                                            <rect key="frame" x="211" y="14" width="69" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Download"/>
+                                            <connections>
+                                                <action selector="downloadTapped:" destination="tvR-eI-HXI" eventType="touchUpInside" id="oKR-Wu-Jdm"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downloadButton" destination="09O-En-BqX" id="Ut1-v9-26v"/>
+                                    <outlet property="nameLabel" destination="IKu-51-yQj" id="dDR-m9-p4m"/>
+                                    <outlet property="viewButton" destination="goJ-bk-vmL" id="xUC-NA-UNz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="bCg-bh-rWE" id="s8f-8B-Gd6"/>
+                            <outlet property="delegate" destination="bCg-bh-rWE" id="j7C-Ts-g8c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7lM-wD-Lrs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMV-ly-Y8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="175.86206896551727"/>
+        </scene>
+        <!--Reader View Controller-->
+        <scene sceneID="PZV-cQ-k9w">
+            <objects>
+                <viewController storyboardIdentifier="ReaderViewController" id="rG9-PR-uTA" customClass="ReaderViewController" customModule="PDF_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vh7-B7-9HP"/>
+                        <viewControllerLayoutGuide type="bottom" id="ILh-Ic-aMd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lqs-Wt-ZnX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUN-0I-Dk1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kUN-0I-Dk1" secondAttribute="trailing" id="0Uk-bB-4HA"/>
+                            <constraint firstItem="kUN-0I-Dk1" firstAttribute="top" secondItem="vh7-B7-9HP" secondAttribute="bottom" id="GHm-jA-LK5"/>
+                            <constraint firstItem="kUN-0I-Dk1" firstAttribute="leading" secondItem="lqs-Wt-ZnX" secondAttribute="leading" id="Gqb-ax-baX"/>
+                            <constraint firstItem="ILh-Ic-aMd" firstAttribute="top" secondItem="kUN-0I-Dk1" secondAttribute="bottom" id="Oq1-CG-Coz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="kUN-0I-Dk1" id="Pe4-pU-3x4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBK-Sv-hLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3iz-7v-DnK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rBP-i5-6pb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ao-T0-CGM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bCg-bh-rWE" kind="relationship" relationship="rootViewController" id="b7q-Zk-toN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K45-XY-Uy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="175.86206896551727"/>
+        </scene>
+    </scenes>
+</document>
